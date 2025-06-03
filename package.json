@@ -2,6 +2,9 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
+   "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "description": "[![Actions Status](https://github.com/bitter-brain/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/bitter-brain/frontend-project-46/actions)",
   "homepage": "https://github.com/bitter-brain/frontend-project-46#readme",
   "bugs": {
