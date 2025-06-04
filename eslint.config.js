@@ -27,7 +27,7 @@ export default [
       'import/no-extraneous-dependencies': 0,
       'no-console': 0,
       'import/extensions': 0,
-      semi: ['error', 'never'],
+      'semi': ['error', 'never'],
     },
   },
 ]

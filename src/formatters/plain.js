@@ -12,7 +12,7 @@ const formatValue = (value) => {
 
 const formatPlain = (value, parent = '') => {
   const result = value
-    .filter((entry) => entry.type !== 'unchanged')
+    .filter(entry => entry.type !== 'unchanged')
     .map((entry) => {
       switch (entry.type) {
         case 'removed':

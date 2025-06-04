@@ -4,7 +4,7 @@ import compareData from './compareData.js'
 import formatData from './formatters/index.js'
 import parse from './parsers.js'
 
-const readFile = (filepath) => fs.readFileSync(filepath, 'utf-8')
+const readFile = filepath => fs.readFileSync(filepath, 'utf-8')
 
 const genDiff = (path1, path2, format = 'stylish') => {
   const filepath1 = path.resolve(process.cwd(), path1)
