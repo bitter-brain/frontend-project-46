@@ -1,4 +1,3 @@
-git {
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
@@ -18,7 +17,7 @@ git {
   "author": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "dependencies": {
     "commander": "^14.0.0",
