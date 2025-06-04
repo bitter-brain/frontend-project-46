@@ -1,14 +1,14 @@
-import _ from 'lodash';
+import _ from 'lodash'
 
 const formatValue = (value) => {
   if (_.isString(value)) {
-    return `'${value}'`;
+    return `'${value}'`
   }
   if (_.isObject(value)) {
-    return '[complex value]';
+    return '[complex value]'
   }
-  return value;
-};
+  return value
+}
 
 const formatPlain = (value, parent = '') => {
   const result = value
@@ -16,23 +16,23 @@ const formatPlain = (value, parent = '') => {
     .map((entry) => {
       switch (entry.type) {
         case 'removed':
-          return `Property '${parent}${entry.key}' was removed`;
+          return `Property '${parent}${entry.key}' was removed`
         case 'added':
           return `Property '${parent}${entry.key}' was added with value: ${formatValue(
             entry.value,
-          )}`;
+          )}`
         case 'changed':
           return `Property '${parent}${entry.key}' was updated. From ${formatValue(
             entry.oldValue,
-          )} to ${formatValue(entry.newValue)}`;
+          )} to ${formatValue(entry.newValue)}`
         case 'nested':
-          return formatPlain(entry.children, `${parent}${entry.key}.`);
+          return formatPlain(entry.children, `${parent}${entry.key}.`)
         default:
-          throw new Error(`Unknown entry type: '${entry.type}'!`);
+          throw new Error(`Unknown entry type: '${entry.type}'!`)
       }
-    });
+    })
 
-  return result.join('\n');
-};
+  return result.join('\n')
+}
 
-export default formatPlain;
+export default formatPlain
